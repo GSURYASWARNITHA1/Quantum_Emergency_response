@@ -158,7 +158,7 @@ optimization    classical          exploration
 [View GitHub Repository](https://github.com/GSURYASWARNITHA1/Quantum_Emergency_response/)
 
 **Live Application:**  
-[Open Live Application](https://quantum-emergency-response-1.onrender.com/)
+[Open Live Application](https://quantum-emergency-response-1.onrender.com)
 
 **Demo Video:**  
 To be added
