@@ -161,7 +161,7 @@ optimization    classical          exploration
 [Open Live Application](https://quantum-emergency-response-1.onrender.com)
 
 **Demo Video:**  
-To be added
+[View Demo](https://drive.google.com/file/d/1V3AGPW5J_3r1lwmDhxPKYJWRWPQrNYCL/view?usp=drivesdk)
 
 **Presentation:**  
 [View Presentation](https://docs.google.com/presentation/d/1wOmoyk8hSLGS3lMWP1U6CAbhVKmkTq9b/edit?usp=drivesdk&ouid=104284665235381980060&rtpof=true&sd=t)
