@@ -16,7 +16,7 @@ The system considers:
 
 It compares a classical **MILP** approach with **Simulated Quantum Annealing (SQA)** and provides a **QAOA** quantum-circuit exploration.
 
-The goal is to study how different optimization approaches handle emergency resource allocation and what trade-offs they produce.
+The goal is to study how different optimization approaches handle emergency resource allocation and the trade-offs between them.
 
 ---
 
@@ -36,16 +36,19 @@ The system represents possible assignments as:
 
 **Ambulance → Emergency → Hospital**
 
-It then compares different approaches:
+It compares three approaches:
 
 ### Classical MILP
-Uses Mixed-Integer Linear Programming with SciPy/HiGHS to find an optimized allocation while respecting the defined constraints.
+
+Uses Mixed-Integer Linear Programming with **SciPy/HiGHS** to find an optimized allocation while respecting the defined constraints.
 
 ### Simulated Quantum Annealing (SQA)
-Uses a QUBO formulation and simulated quantum annealing to search for an optimized allocation.
+
+Uses a **QUBO formulation** and simulated quantum annealing to search for an optimized allocation using a transverse-field Ising model.
 
 ### QAOA
-Provides a quantum-circuit-based exploration using Qiskit and a simulator.
+
+Provides a quantum-circuit-based exploration using **Qiskit** and a simulator.
 
 > **Note:** The project does not claim quantum advantage. SQA is simulated on classical hardware, and the purpose is to compare approaches and study their trade-offs.
 
@@ -59,15 +62,15 @@ Standard scenario:
 
 | Metric | Classical MILP | SQA |
 |---|---:|---:|
-| Emergencies Served | **5/5** | 3/5 |
-| Total Distance | 30 km | **21 km** |
-| Average Response Time | **10.8 min** | 12.6 min |
-| High-Severity Served | **3/3** | 2/3 |
-| Runtime | **37.45 ms** | 21.84 s |
+| Emergencies Served | 5/5 | 3/5 |
+| Total Distance | 30 km | 21 km |
+| Average Response Time | 10.8 min | 12.6 min |
+| High-Severity Served | 3/3 | 2/3 |
+| Runtime | 6.14 ms | 29,772.55 ms (~29.8 s) |
 
-The result demonstrates that different optimization approaches can produce different trade-offs.
+The result demonstrates that the two approaches can produce different optimization trade-offs.
 
-In this benchmark, classical MILP provides complete emergency coverage and significantly lower runtime, while SQA produces a shorter distance for the assignments it selects.
+In this benchmark, **Classical MILP achieves complete emergency coverage**, while **SQA serves 3/5 emergencies and produces a lower total distance among its selected assignments**.
 
 ---
 
@@ -81,7 +84,7 @@ In this benchmark, classical MILP provides complete emergency coverage and signi
 - ⚛️ Simulated Quantum Annealing
 - ⚛️ QAOA exploration
 - 📊 Algorithm comparison
-- 📈 Distance, response-time and runtime metrics
+- 📈 Distance, response-time, and runtime metrics
 
 ---
 
@@ -94,8 +97,10 @@ In this benchmark, classical MILP provides complete emergency coverage and signi
 **Optimization:** MILP, QUBO, SQA, QAOA
 
 ---
-🏗️ Project Structure:
 
+## 🏗️ Project Structure
+
+```text
 quantum-emergency-response/
 │
 ├── backend/
@@ -129,35 +134,30 @@ quantum-emergency-response/
 │
 └── README.md
 
-## 🏗️ Architecture
-
-```text
 Emergency Scenario
         ↓
 Ambulances + Emergencies + Hospitals
         ↓
 Optimization Model
         ↓
- ┌──────────────┬──────────────┐
- ↓              ↓              ↓
-MILP            SQA           QAOA
- ↓              ↓              ↓
-Classical       Quantum-       Quantum
-Solution        inspired       circuit
-                Solution       exploration
- └──────────────┴──────────────┘
-                ↓
-        Results & Comparison
+ ┌──────────────┬──────────────────┬──────────────────┐
+ ↓              ↓                  ↓
+MILP            SQA                QAOA
+ ↓              ↓                  ↓
+Classical       Quantum-inspired   Quantum-circuit
+optimization    classical          exploration
+                simulation
+ └──────────────┴──────────────────┴──────────────────┘
+                         ↓
+                  Results & Comparison
 
-
-
-**🌐 Links**
+🌐 Links
 
 GitHub:
 To be added
 
 Live Application:
-To be added
+https://quantum-emergency-response.onrender.com
 
 Demo Video:
 To be added
@@ -165,9 +165,7 @@ To be added
 Presentation:
 To be added
 
-
-**🔮 Future Scope**
-
+🔮 Future Scope
 -> Larger emergency scenarios
 -> Real road-network and traffic data
 -> Dynamic emergency arrivals
@@ -175,7 +173,7 @@ To be added
 -> Testing on actual quantum hardware
 -> Integration with real emergency-response systems
 
-**👤 Individual Project**
+👤 Individual Project
 
 Developer: GUNUPUDI SURYA SWARNITHA
 
