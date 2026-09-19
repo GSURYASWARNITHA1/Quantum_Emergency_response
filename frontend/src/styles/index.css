@@ -1,0 +1,255 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap');
+
+:root {
+  --bg-dark: #070a13;
+  --bg-card: #0f172a;           /* Solid Dark Slate - No transparency bleed */
+  --bg-card-secondary: #1e293b; /* Solid Slightly Lighter Slate for Sub-cards */
+  --border-card: #334155;        /* Crisp Slate 700 Border */
+  --border-glow: #38bdf8;
+  
+  --cyan-primary: #38bdf8;
+  --purple-quantum: #c084fc;
+  --emerald-success: #34d399;
+  --rose-danger: #fb7185;
+  --amber-warning: #fde047;
+  
+  --text-main: #ffffff;
+  --text-muted: #cbd5e1;
+  --text-dim: #94a3b8;
+  
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body, #root {
+  background-color: #070a13 !important;
+  color: #ffffff !important;
+  font-family: var(--font-sans);
+  min-height: 100vh;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+/* Glassmorphism Card Style - Solid Dark Card Backgrounds */
+.glass-panel {
+  background-color: #0f172a !important;
+  border: 1px solid #334155 !important;
+  border-radius: 14px;
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.6);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.glass-panel:hover {
+  border-color: #38bdf8 !important;
+  box-shadow: 0 10px 40px 0 rgba(56, 189, 248, 0.25);
+}
+
+.app-container {
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background-color: #070a13;
+}
+
+/* Typography & Badges */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.badge-cyan {
+  background-color: #0369a1 !important;
+  color: #ffffff !important;
+  border: 1px solid #38bdf8 !important;
+}
+
+.badge-purple {
+  background-color: #6b21a8 !important;
+  color: #ffffff !important;
+  border: 1px solid #c084fc !important;
+}
+
+.badge-rose {
+  background-color: #9f1239 !important;
+  color: #ffffff !important;
+  border: 1px solid #fb7185 !important;
+}
+
+.badge-emerald {
+  background-color: #065f46 !important;
+  color: #ffffff !important;
+  border: 1px solid #34d399 !important;
+}
+
+/* Severity Pill Colors - High Contrast Text */
+.severity-5 { background-color: #9f1239 !important; color: #ffffff !important; border: 1px solid #fb7185 !important; font-weight: 700; }
+.severity-4 { background-color: #9a3412 !important; color: #ffffff !important; border: 1px solid #fb923c !important; font-weight: 700; }
+.severity-3 { background-color: #854d0e !important; color: #ffffff !important; border: 1px solid #fde047 !important; font-weight: 700; }
+.severity-2 { background-color: #065f46 !important; color: #ffffff !important; border: 1px solid #34d399 !important; font-weight: 700; }
+.severity-1 { background-color: #075985 !important; color: #ffffff !important; border: 1px solid #38bdf8 !important; font-weight: 700; }
+
+/* Grid Layouts */
+.main-dashboard-grid {
+  display: grid;
+  grid-template-columns: 350px 1fr 390px;
+  gap: 20px;
+}
+
+@media (max-width: 1400px) {
+  .main-dashboard-grid {
+    grid-template-columns: 330px 1fr;
+  }
+  .quantum-side-column {
+    grid-column: span 2;
+  }
+}
+
+@media (max-width: 900px) {
+  .main-dashboard-grid {
+    grid-template-columns: 1fr;
+  }
+  .quantum-side-column {
+    grid-column: span 1;
+  }
+}
+
+/* High Contrast Buttons & Controls */
+.btn-primary {
+  background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%) !important;
+  color: #ffffff !important;
+  font-weight: 700 !important;
+  border: 1.5px solid #38bdf8 !important;
+  padding: 12px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 14px rgba(2, 132, 199, 0.4);
+}
+
+.btn-primary:hover {
+  background: linear-gradient(135deg, #38bdf8 0%, #0284c7 100%) !important;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(56, 189, 248, 0.5);
+}
+
+.btn-quantum {
+  background: linear-gradient(135deg, #9333ea 0%, #7e22ce 100%) !important;
+  color: #ffffff !important;
+  font-weight: 700 !important;
+  border: 1.5px solid #c084fc !important;
+  padding: 12px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 14px rgba(147, 51, 234, 0.4);
+}
+
+.btn-quantum:hover {
+  background: linear-gradient(135deg, #a855f7 0%, #9333ea 100%) !important;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(168, 85, 247, 0.5);
+}
+
+.btn-secondary {
+  background-color: #1e293b !important;
+  color: #ffffff !important;
+  border: 1.5px solid #475569 !important;
+  padding: 10px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.88rem;
+  font-weight: 700;
+  transition: all 0.2s ease;
+}
+
+.btn-secondary:hover {
+  background-color: #334155 !important;
+  border-color: #38bdf8 !important;
+  color: #ffffff !important;
+}
+
+/* Form Inputs High Contrast */
+input, select {
+  background-color: #090d16 !important;
+  border: 1.5px solid #475569 !important;
+  color: #ffffff !important;
+  padding: 9px 14px;
+  border-radius: 6px;
+  font-family: var(--font-sans);
+  font-size: 0.88rem;
+  font-weight: 600;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+input:focus, select:focus {
+  border-color: #38bdf8 !important;
+  box-shadow: 0 0 0 2px rgba(56, 189, 248, 0.3);
+}
+
+select option {
+  background-color: #0f172a !important;
+  color: #ffffff !important;
+}
+
+/* Animations */
+@keyframes pulse-glow {
+  0%, 100% { transform: scale(1); opacity: 0.9; }
+  50% { transform: scale(1.15); opacity: 1; }
+}
+
+.pulse-emergency {
+  animation: pulse-glow 2s infinite ease-in-out;
+}
+
+@keyframes dash-route {
+  to {
+    stroke-dashoffset: -40;
+  }
+}
+
+.route-path-animated {
+  stroke-dasharray: 8 6;
+  animation: dash-route 1.5s linear infinite;
+}
+
+/* QUBO Heatmap / Matrix cell styling */
+.qubo-cell {
+  width: 34px;
+  height: 34px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  font-weight: 800;
+  font-family: var(--font-mono);
+  border-radius: 4px;
+  border: 1px solid #475569;
+}
