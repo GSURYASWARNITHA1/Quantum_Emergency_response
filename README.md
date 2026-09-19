@@ -154,16 +154,16 @@ optimization    classical          exploration
 🌐 Links
 
 GitHub:
-To be added
+https://github.com/GSURYASWARNITHA1/Quantum_Emergency_response/
 
 Live Application:
-https://quantum-emergency-response-1.onrender.com
+https://quantum-emergency-response-1.onrender.com/
 
 Demo Video:
 To be added
 
 Presentation:
-https://docs.google.com/presentation/d/1wOmoyk8hSLGS3lMWP1U6CAbhVKmkTq9b/edit?usp=drivesdk&ouid=104284665235381980060&rtpof=true&sd=true
+https://docs.google.com/presentation/d/1wOmoyk8hSLGS3lMWP1U6CAbhVKmkTq9b/edit?usp=drivesdk&ouid=104284665235381980060&rtpof=true&sd=true/
 
 🔮 Future Scope
 -> Larger emergency scenarios
