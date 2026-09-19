@@ -96,8 +96,8 @@ export default function App() {
 
   // Check Python backend connection on mount
   useEffect(() => {
-    fetch('https://quantum-emergency-response.onrender.com')
-      .then(res => res.json())
+fetch('https://quantum-emergency-response.onrender.com/api/health')
+  .then(res => res.json())
       .then(data => {
         if (data.status === 'healthy') setIsBackendConnected(true);
       })
@@ -131,8 +131,8 @@ export default function App() {
 
     if (isBackendConnected) {
       try {
-        const res = await fetch('https://quantum-emergency-response.onrender.com', {
-          method: 'POST',
+const res = await fetch('https://quantum-emergency-response.onrender.com/api/optimize/classical', {
+  method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify(scenario)
         });
@@ -156,8 +156,8 @@ export default function App() {
 
     if (isBackendConnected) {
       try {
-        const res = await fetch('https://quantum-emergency-response.onrender.com', {
-          method: 'POST',
+const res = await fetch('https://quantum-emergency-response.onrender.com/api/optimize/sqa', {
+  method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify(scenario)
         });
@@ -180,8 +180,8 @@ export default function App() {
 
     if (isBackendConnected) {
       try {
-        const res = await fetch('https://quantum-emergency-response.onrender.com', {
-          method: 'POST',
+const res = await fetch('https://quantum-emergency-response.onrender.com/api/optimize/comparison', {
+  method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify(scenario)
         });
