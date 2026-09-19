@@ -150,6 +150,7 @@ optimization    classical          exploration
  └──────────────┴──────────────────┴──────────────────┘
                          ↓
                   Results & Comparison
+```
 
 ## **🌐 Links**
 
@@ -163,8 +164,8 @@ optimization    classical          exploration
 To be added
 
 **Presentation:**  
-https://docs.google.com/presentation/d/1wOmoyk8hSLGS3lMWP1U6CAbhVKmkTq9b/edit?usp=drivesdk&ouid=104284665235381980060&rtpof=true&sd=t
-##
+[View Presentation](https://docs.google.com/presentation/d/1wOmoyk8hSLGS3lMWP1U6CAbhVKmkTq9b/edit?usp=drivesdk&ouid=104284665235381980060&rtpof=true&sd=t)
+
 🔮 Future Scope
 -> Larger emergency scenarios
 -> Real road-network and traffic data
